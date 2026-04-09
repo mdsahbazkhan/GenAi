@@ -1,8 +1,15 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-from langchain_google_genai import ChatGoogleGenerativeAI
-llm=ChatGoogleGenerativeAI(model="gemini-3-flash-preview")
+# from langchain_google_genai import ChatGoogleGenerativeAI
+# llm=ChatGoogleGenerativeAI(model="gemini-3-flash-preview")
+from langchain_groq import ChatGroq
+import os
+llm = ChatGroq(
+    model_name="llama-3.3-70b-versatile",
+    temperature=0.7,
+     api_key=os.getenv("GROQ_API_KEY")
+)
 import streamlit as st
 
 st.title("AskBuddy-Q&A Bot")
