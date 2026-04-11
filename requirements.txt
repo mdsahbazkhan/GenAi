@@ -3,3 +3,4 @@ langchain-groq
 dotenv
 langchain-google-genai
 streamlit
+langchain-ollama
