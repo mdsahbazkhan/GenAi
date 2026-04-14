@@ -8,7 +8,8 @@ import os
 llm = ChatGroq(
     model_name="llama-3.3-70b-versatile",
     temperature=0.7,
-     api_key=os.getenv("GROQ_API_KEY")
+     api_key=os.getenv("GROQ_API_KEY"),
+     streaming=True
 )
 import streamlit as st
 
@@ -31,6 +32,14 @@ if query:
     conversation=""
     for message in st.session_state.messages:
         conversation+=f"{message['role']}: {message['content']}\n"
-    res=llm.invoke(conversation)
-    st.session_state.messages.append({"role":"ai","content":res.text})
-    st.chat_message("ai").markdown(res.text)
+        # AI response container
+    with st.chat_message("ai"):
+        response_placeholder = st.empty()
+        full_response = ""
+    res=llm.stream(conversation)
+    for chunk in res:
+        full_response+=chunk.text
+        response_placeholder.markdown(full_response)
+
+#Save the AI response to session state
+    st.session_state.messages.append({"role":"ai","content":full_response})
