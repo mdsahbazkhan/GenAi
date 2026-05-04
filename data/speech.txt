@@ -1,0 +1,13 @@
+Artificial Intelligence is one of the most powerful technologies of the modern era. It is transforming industries, improving productivity, and changing the way humans interact with machines. From healthcare to education, AI is making systems smarter and more efficient.
+
+Machine Learning, which is a subset of Artificial Intelligence, allows systems to learn from data without being explicitly programmed. It uses algorithms to identify patterns and make decisions. For example, recommendation systems on platforms like Netflix and YouTube use machine learning to suggest content based on user preferences.
+
+Deep Learning is a more advanced form of Machine Learning that uses neural networks with multiple layers. These networks are inspired by the human brain and are capable of solving complex problems such as image recognition, speech recognition, and natural language processing.
+
+Natural Language Processing, also known as NLP, enables machines to understand and interpret human language. It is used in applications like chatbots, virtual assistants, and language translation systems. Tools like ChatGPT are based on NLP and can generate human-like responses.
+
+One important concept in modern AI systems is Retrieval-Augmented Generation, or RAG. RAG improves the performance of language models by combining them with external data sources. Instead of relying only on pre-trained knowledge, RAG systems retrieve relevant information from a database and use it to generate more accurate and context-aware responses.
+
+The RAG pipeline typically includes steps such as data collection, chunking, embedding, storing data in a vector database, performing similarity search, and generating responses using a language model. This approach helps reduce hallucination and ensures that answers are based on real data.
+
+In the future, AI will continue to grow and impact various industries. However, it is important to use AI responsibly and ensure that it is developed in an ethical and transparent way.
